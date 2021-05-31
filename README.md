@@ -1,2 +1,2 @@
-# ionospheric_TEC_earthquake
-Research on the relationship between Ionospheric Total Free-Electron Content and earthquake.
+# Ionospheric TEC anomaly as an earthquake precursor
+Discover the relationship between Ionospheric Total Free-Electron Content and earthquake.
