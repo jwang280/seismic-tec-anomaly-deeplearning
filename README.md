@@ -32,4 +32,4 @@ The input data is the 50 by 50 by 1 shaped NumPy array images, there are also so
 6. Data labelling for the 15 sequences of each event are, 0.4 for the event day, 0.25 the one day apart, and 0.05 for the two days apart, otherwise 0.
 7. Resampling strategy is used to solve the 'class' imbalance.
 8. Training data is shuffled before the training, to maximize the distance between neighbour samples.
-9. Baysian Optimizer is utilized for hyperparameter tuning in some parts of the training.
+9. Bayesian Optimizer is utilized for hyperparameter tuning in some parts of the training.
