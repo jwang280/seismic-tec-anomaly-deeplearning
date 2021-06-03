@@ -1,5 +1,5 @@
 # Ionospheric TEC anomaly as an earthquake precursor
-This project is to discover the relationship between Ionospheric Total Free-Electron Content（TEC) anomaly and earthquakes in New Zealand.
+This project is to discover the relationship between Ionospheric Total Free-Electron Content(TEC) anomaly and earthquakes in New Zealand.
 
 The amount of TEC values varies with the amount of radiation received from the Sun.Thus, TEC values have seasonal variations, TEC values drop since there is less radiation received in winter, and increases in summer.It also has a strong daily fluctuation, TEC values are high during daytime and near-zero at night-time.Free-electrons imposes a dispersive delay on the GPS satellite ranging signals broadcasting.The affection on the ranging signals also varies with TEC values.
 
@@ -16,3 +16,6 @@ There are three main programs from the GPSTk are used in this project.
 3. TECMaps, reads the output data from both ResCor and IonoBias programs, to create maps of the TEC.
 
 The assumption of this series of process is, the ionosphere is a thin shell about 350 kilometres height above the ground, by knowing this fixed vertical TEC height, the oblique angle of the GPS ranging signal, and the Ionospheric Pierce Point(IPP), where the ranging signal goes through the thin shell, the slant length from the TEC to the receiver can be computed. Put both of the computed factors and estimated factors that without TEC affections, into a least-square model, the TEC value at the corresponding IPP can be estimated. Finally, a TEC map is plotted throughout all gridded IPPs.
+
+After the daily 2880 TEC maps are generated(with 30 seconds interval), according to the Fortran code, another assumption is adopted, which is if the gridded TEC values are standing out in a relatively large area and the anomaly time is relatively long, this TEC anomaly is more likely caused by solar activities or other geomagnetic effects, otherwise, the anomaly has a better chance caused by pre-earthquake TEC anomaly(PETA).
+
