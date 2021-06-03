@@ -19,3 +19,14 @@ The assumption of this series of process is, the ionosphere is a thin shell abou
 
 After the daily 2880 TEC maps are generated(with 30 seconds interval), according to the Fortran code, another assumption is adopted, which is if the gridded TEC values are standing out in a relatively large area and the anomaly time is relatively long, this TEC anomaly is more likely caused by solar activities or other geomagnetic effects, otherwise, the anomaly has a better chance caused by pre-earthquake TEC anomaly(PETA).
 
+In terms of this assumption, daily PETA correlation files are generated. Based on these PETA correlation values, data visualization PETA images are generated, to show all the gridded correlation values that cover the geographical distribution of New Zealand.
+
+These geographical NumPy array data formed images, can be systematically analysed by deep learning methods, to analyse the underlying true relationship between the TEC anomaly and earthquakes. ConvLSTM2D neural network method from TensorFlow, which considers both spatial and temporal matters at the same time, is deployed in this project.
+
+The input data is the 50 by 50 by 1 shaped numby array images, there are also some data preprocessing are neccessary before the model is trained.
+1. 29 major earthquake events from 2003, which excludes aftershocks that are within 3 days, and 24 days of data, 21 days before the event and 2 days after, are selected for the input data. There are 29 events in total.
+2. Add the normalised sunspot numbers that scaled from 0 to 1, to be the second layer of the data, which takes TEC affected by Solar radiations received into account.
+3. Add the normalised day of the year that scaled from -1 to 1, to be the third layer, which takes how many of those sunspot numbers are actually affecting the local TEC as another coefficient.
+4. Data splitting of 26 events for training and 3 events for test is applied.
+5. A time sequence length of 10 days is applied, thus 15 sequences in each event.
+6. 
