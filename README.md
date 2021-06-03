@@ -23,10 +23,13 @@ In terms of this assumption, daily PETA correlation files are generated. Based o
 
 These geographical NumPy array data formed images, can be systematically analysed by deep learning methods, to analyse the underlying true relationship between the TEC anomaly and earthquakes. ConvLSTM2D neural network method from TensorFlow, which considers both spatial and temporal matters at the same time, is deployed in this project.
 
-The input data is the 50 by 50 by 1 shaped numby array images, there are also some data preprocessing are neccessary before the model is trained.
+The input data is the 50 by 50 by 1 shaped NumPy array images, there are also some data preprocessing methods that are necessary before the model is trained.
 1. 29 major earthquake events from 2003, which excludes aftershocks that are within 3 days, and 24 days of data, 21 days before the event and 2 days after, are selected for the input data. There are 29 events in total.
 2. Add the normalised sunspot numbers that scaled from 0 to 1, to be the second layer of the data, which takes TEC affected by Solar radiations received into account.
 3. Add the normalised day of the year that scaled from -1 to 1, to be the third layer, which takes how many of those sunspot numbers are actually affecting the local TEC as another coefficient.
-4. Data splitting of 26 events for training and 3 events for test is applied.
+4. Data splitting of 26 events in the training and 3 events in the test is applied.
 5. A time sequence length of 10 days is applied, thus 15 sequences in each event.
-6. 
+6. Data labelling for the 15 sequences of each event are, 0.4 for the event day, 0.25 the one day apart, and 0.05 for the two days apart, otherwise 0.
+7. Resampling strategy is used to solve the 'class' imbalance.
+8. Training data is shuffled before the training, to maximize the distance between neighbour samples.
+9. Baysian Optimizer is utilized for hyperparameter tuning in some parts of the training.
