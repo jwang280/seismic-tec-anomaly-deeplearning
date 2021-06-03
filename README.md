@@ -14,4 +14,5 @@ There are three main programs from the GPSTk are used in this project.
 1. ResCor, computes any residuals and correlations, and then register extended RINEX observation data.
 2. Ionobias, continue reads the extended RINEX observation data to estimate satellite and receiver biases and to compute a simple ionospheric model using least squares and the slant TEC values.
 3. TECMaps, reads the output data from both ResCor and IonoBias programs, to create maps of the TEC.
+
 The assumption of this series of process is, the ionosphere is a thin shell about 350 kilometres height above the ground, by knowing this fixed vertical TEC height, the oblique angle of the GPS ranging signal, and the Ionospheric Pierce Point(IPP), where the ranging signal goes through the thin shell, the slant length from the TEC to the receiver can be computed. Put both of the computed factors and estimated factors that without TEC affections, into a least-square model, the TEC value at the corresponding IPP can be estimated. Finally, a TEC map is plotted throughout all gridded IPPs.
