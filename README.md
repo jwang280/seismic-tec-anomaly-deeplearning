@@ -5,7 +5,7 @@ The amount of TEC values varies with the amount of radiation received from the S
 
 In addition, during earthquake preparations, free-electrons are released from the ground and change the local ionospheric TEC values in a relatively short period of time.When is the TEC anomaly occurs due to earthquake preparations remain controversial? Between 3 days and 2 weeks before and after the earthquakes are discussed in different research articles.
 
-This project will start from collect the original GPS raw data.There are two types of data, one is the GPS observation data from local GeoNet, powered by GNS Science, the other is the navigation data, which is the ephemeris data for GPS constellation, from Scripps Orbit and Permanent Array Center in California. 
+This project started from collect the original GPS raw data.There are two types of data, one is the GPS observation data from local GeoNet, powered by GNS Science, the other is the navigation data, which is the ephemeris data for GPS constellation, from Scripps Orbit and Permanent Array Center in California. 
 Both types of raw data are in receiver independent exchange(RINEX) format, which enables users to post-process the GPS stations received data and generates more accurate results.
 
 GPS Toolkit(GPSTk), an open-source computing suite to the satellite navigation community produced by Space and Geophysics Laboratory within the Applied Research Laboratories of the University of Texas at Austin, to process GPS associated satellite navigation system data (https://gitlab.com/sgl-ut/GPSTk), is utilised to translate the raw GPS data.
