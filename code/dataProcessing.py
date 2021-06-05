@@ -7,9 +7,9 @@ import datetime
 # and jupyter, scipy, sklearn, pandas, pandas-datareader, matplotlib, pillow, requests, h5py, nb_conda
 # python3 -m pip install --upgrade --user pip
 
-from TECfetchData import TECfetchData
-from RunCorrelation import RunCorrelation
-from MakeImage import MakeImage
+from tecFetchData import TECfetchData
+from runCorrelation import RunCorrelation
+from makeImage import MakeImage
 from dateutil import parser
 from AddSunspot import AddSunspot
 
